@@ -1,0 +1,137 @@
+/* 📌 Общий стиль */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #121212; /* Темный фон */
+}
+
+/* 📌 Контейнер слайдов */
+.presentation {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* 📌 Слайды */
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+}
+
+/* 📌 Активный слайд */
+.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+/* 📌 Заголовки */
+h1, h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #FFD700; /* Золотой цвет */
+    text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8), 
+                 0px 0px 20px rgba(255, 215, 0, 0.5);
+}
+
+/* 📌 Обычный текст */
+p {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #FFFFFF; /* Белый текст */
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* 📌 Кнопки */
+.controls {
+    position: absolute;
+    bottom: 10%;
+}
+
+button {
+    background: linear-gradient(45deg, #FF3CAC, #784BA0, #2B86C5);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 50px;
+    transition: 0.3s ease;
+    box-shadow: 0px 0px 15px rgba(255, 105, 180, 0.8);
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 25px rgba(255, 105, 180, 1);
+}
+
+/* 📌 Адаптивный дизайн */
+@media (max-width: 768px) {
+    .presentation {
+        height: 60vh;
+    }
+
+    h1, h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .presentation {
+        height: 50vh;
+        padding: 10px;
+    }
+
+    h1, h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
